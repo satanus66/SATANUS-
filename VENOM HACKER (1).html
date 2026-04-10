@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VENOM UNBAN☠️ </title>
+
+<style>
+  * { box-sizing: border-box; }
+  
+  body {
+    margin: 0;
+    font-family: "Courier New", monospace;
+    background: linear-gradient(135deg, #1a0033 0%, #000 50%, #330066 100%);
+    color: #ff00ff;
+    overflow-y: auto;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(45deg, rgba(255,0,255,0.05), rgba(255,0,255,0.05) 2px, transparent 2px, transparent 8px);
+    animation: matrixRain 4s linear infinite;
+    pointer-events: none;
+    z-index: -2;
+  }
+
+  @keyframes matrixRain {
+    0% { transform: translateX(0) translateY(0); }
+    100% { transform: translateX(100px) translateY(100px); }
+  }
+
+  body::after {
+    content: "SATANIC v1.0";
+    position: fixed;
+    top: 20%;
+    right: -20%;
+    font-size: 180px;
+    font-weight: bold;
+    color: rgba(255, 0, 255, 0.04);
+    pointer-events: none;
+    z-index: -1;
+    text-shadow: 0 0 60px #ff00ff;
+    letter-spacing: 15px;
+    transform: rotate(-15deg);
+    animation: glitch 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes glitch {
+    0% { transform: translate(0, 0) rotate(-15deg); }
+    20% { transform: translate(-2px, 2px) rotate(-15deg); }
+    40% { transform: translate(-2px, -2px) rotate(-15deg); }
+    60% { transform: translate(2px, 2px) rotate(-15deg); }
+    80% { transform: translate(2px, -2px) rotate(-15deg); }
+    100% { transform: translate(0, 0) rotate(-15deg); }
+  }
+
+  .container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 2px solid #ff00ff;
+    background: rgba(0,0,0,0.92);
+    box-shadow: 0 0 50px #ff00ff, inset 0 0 30px rgba(255,0,255,0.1);
+    position: relative;
+    z-index: 10;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+  }
+
+  h1 {
+    text-align: center;
+    margin: 0 0 1.5rem;
+    font-size: 28px;
+    text-shadow: 0 0 25px #ff00ff;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from { filter: drop-shadow(0 0 10px #ff00ff); }
+    to { filter: drop-shadow(0 0 20px #ff00ff); }
+  }
+
+  h2 { 
+    color: #ff00ff; 
+    margin-bottom: 1rem; 
+    text-shadow: 0 0 10px #ff00ff;
+  }
+
+  .step { display: none; }
+  .step.active { display: block; }
+
+  input, button, .telegram-btn {
+    width: 100%;
+    padding: 16px;
+    margin-top: 12px;
+    background: rgba(255,0,255,0.1);
+    color: #ff00ff;
+    border: 1px solid #ff00ff;
+    font-family: inherit;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: all 0.3s;
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 20px rgba(255,0,255,0.5);
+    background: rgba(255,0,255,0.15);
+  }
+
+  button, .telegram-btn {
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+  }
+
+  button::before, .telegram-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+  }
+
+  button:hover::before, .telegram-btn:hover::before {
+    left: 100%;
+  }
+
+  button:hover, .telegram-btn:hover {
+    background: #ff00ff !important;
+    color: #000 !important;
+    box-shadow: 0 0 25px #ff00ff;
+    transform: translateY(-2px);
+  }
+
+  .back-btn {
+    background: rgba(0,255,255,0.2) !important;
+    color: #00ffff !important;
+    border-color: #00ffff !important;
+    margin-top: 10px;
+  }
+
+  .back-btn:hover {
+    background: #00ffff !important;
+    color: #000 !important;
+    box-shadow: 0 0 25px #00ffff !important;
+  }
+
+  .home-btn {
+    background: rgba(0,255,0,0.3) !important;
+    color: #00ff00 !important;
+    border-color: #00ff00 !important;
+    margin: 10px 0;
+  }
+
+  .home-btn:hover {
+    background: #00ff00 !important;
+    color: #000 !important;
+    box-shadow: 0 0 25px #00ff00 !important;
+  }
+
+  .appeal-btn {
+    background: rgba(255,165,0,0.3) !important;
+    color: #ffa500 !important;
+    border-color: #ffa500 !important;
+    margin: 10px 0;
+  }
+
+  .appeal-btn:hover {
+    background: #ffa500 !important;
+    color: #000 !important;
+    box-shadow: 0 0 25px #ffa500 !important;
+  }
+
+  .progress-container {
+    margin-top: 20px;
+  }
+
+  .progress-bar {
+    height: 24px;
+    background: rgba(0,0,0,0.8);
+    border: 2px solid #ff00ff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+    width: 0%;
+    transition: width 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+  }
+
+  .progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .progress-text {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff00ff;
+  }
+
+  .status {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #00ffff;
+    text-align: center;
+    background: rgba(0,255,255,0.1);
+    display: none;
+    border-radius: 6px;
+  }
+
+  .error-status {
+    border-color: #ff3366 !important;
+    background: rgba(255,51,102,0.2) !important;
+    color: #ff3366 !important;
+  }
+
+  .telegram-section {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0,255,255,0.1);
+    border: 1px solid #00ffff;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .telegram-btn {
+    background: linear-gradient(45deg, #0088cc, #00aaff) !important;
+    color: white !important;
+    border-color: #00aaff !important;
+    font-weight: bold !important;
+    margin-top: 10px;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+  }
+
+  .ban-type-btn {
+    background: linear-gradient(45deg, #ff0066, #ff3399) !important;
+    color: white !important;
+    border-color: #ff0066 !important;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .pulse {
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255,0,255,0.7); }
+    70% { box-shadow: 0 0 0 20px rgba(255,0,255,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,0,255,0); }
+  }
+
+  /* Success Screen Styles */
+  .success-permanent {
+    border-color: #ff0000 !important;
+    background: rgba(255,0,0,0.15) !important;
+    box-shadow: 0 0 40px #ff0000 !important;
+  }
+
+  .success-temporary {
+    border-color: #00ff00 !important;
+    background: rgba(0,255,0,0.15) !important;
+    box-shadow: 0 0 40px #00ff00 !important;
+  }
+
+  .success-title-permanent {
+    color: #ff4444 !important;
+    text-shadow: 0 0 20px #ff0000 !important;
+  }
+
+  .success-title-temporary {
+    color: #44ff44 !important;
+    text-shadow: 0 0 20px #00ff00 !important;
+  }
+
+  @media (max-width: 480px) {
+    .container { margin: 1rem; padding: 1.5rem; }
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="pulse">VENOM UNBAN  v1.0 ☠️</h1>
+
+  <!-- ACCESS KEY -->
+  <div id="access">
+    <h2>🔑 ENTER ACCESS KEY</h2>
+    <input type="text" id="accesskey" placeholder="Enter 9-digit key" maxlength="9">
+    <button id="unblockBtn" onclick="checkAccessKey()"> UNBLOCK ME</button>
+    <div id="access-error" style="color:#ff3366; text-align:center; margin-top:12px; display:none; font-weight:bold;">❌ INVALID KEY - TRY AGAIN</div>
+  </div>
+
+  <!-- MAIN TOOL -->
+  <div id="main-tool" style="display:none;">
+
+    <div id="step1" class="step active">
+      <h2>📱 STEP 1 — WhatsApp Number</h2>
+      <input type="text" id="phone" placeholder="+2348012345678" />
+      <button onclick="nextStep(2)">CONTINUE →</button>
+      <div id="phone-error" class="status error-status" style="display:none;"></div>
+    </div>
+
+    <div id="step2" class="step">
+      <h2>📧 STEP 2 — enter your Gmail</h2>
+      <input type="email" id="gmail" placeholder="yourname@gmail.com" />
+      <button onclick="nextStep(3)">CONTINUE →</button>
+      <button class="back-btn" onclick="prevStep(1)">← BACK</button>
+      <div id="gmail-error" class="status error-status" style="display:none;"></div>
+    </div>
+
+    <div id="step3" class="step">
+      <h2>🔐 STEP 3 — enter your App Password make sure is correct</h2>
+      <input type="password" id="apppassword" placeholder="16-char App Password" />
+      <button onclick="prepareSend()">ANALYZE & START</button>
+      <button class="back-btn" onclick="prevStep(2)">← BACK</button>
+      <div id="status" class="status"></div>
+    </div>
+
+    <!-- Ban Type Selection -->
+    <div id="ban-type-screen" style="display:none; text-align:center;">
+      <h2>⚡ SELECT UNBAN TYPE</h2>
+      <button onclick="startSimulation('Temporary')" class="ban-type-btn">🟡 TEMPORARY</button>
+      <button onclick="startSimulation('Permanent')" class="ban-type-btn">🔴 PERMANENT</button>
+      <button class="back-btn" onclick="hideBanType()">← CHANGE INFO</button>
+    </div>
+
+    <!-- Enhanced Progress Screen -->
+    <div id="progress-screen" style="display:none; text-align:center;">
+      <h2 id="progress-title">INITIALIZING...</h2>
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <div id="progress-text" class="progress-text">[░░░░░░░░░░░░] 0%</div>
+      </div>
+      <div id="sim-status" style="margin-top:15px; color:#00ffff; font-weight:bold;"></div>
+    </div>
+
+    <!-- Success Screen -->
+    <div id="success-screen" style="display:none; text-align:center;">
+      <h2 id="success-title" style="color:#00ff00;">✅ MISSION COMPLETE</h2>
+      <div id="success-box" style="padding:20px; border-radius:8px; margin:20px 0; border:1px solid #00ff00;">
+        <p id="success-text" style="line-height:1.6; margin:0;"></p>
+      </div>
+      <button class="home-btn" onclick="goHome()">🏠 BACK TO HOME PAGE</button>
+      <button class="appeal-btn" onclick="requestAppealAgain()">🔄 REQUEST APPEAL AGAIN</button>
+    </div>
+
+    <button class="back-btn" onclick="showInstructions()" style="margin-top:15px;">📖 INFO</button>
+  </div>
+
+  <!-- Telegram Join -->
+  <div id="telegram-section" class="telegram-section" style="display:none;">
+    <h3 style="color:#00ffff; margin-bottom:10px;">👥 JOIN VENOM CH</h3>
+    <p style="color:#00aaff; font-size:14px; margin-bottom:10px;">Get latest tools & updates</p>
+    <a href="https://t.me/Nigeriahacker" target="_blank" class="telegram-btn">🚀 JOIN TELEGRAM</a>
+  </div>
+</div>
+
+<div class="footer">
+  VENOM ☠️ UNBAN— 2027 EDITION|
+</div>
+
+<script>
+// ============== CONFIG ==============
+const ACCESS_KEY = "VENOMME";
+let telegramChannel = "https://t.me/felix_120fps";
+
+const progressStages = [
+  "🔄 Connecting to WhatsApp API...",
+  "📡 Authenticating with support@whatsapp.com...",
+  "⚙️ Generating appeal templates...",
+  "📤 Sending appeal #1 to support@whatsapp.com...",
+  "📤 Sending appeal #2 to abuse@whatsapp.com...",
+  "📤 Sending appeal #3 to policy@whatsapp.com...",
+  "🔒 Encrypting with BADBOI protocol...",
+  "✅ Appeals delivered - Awaiting response...",
+  "🎉 Unban processing!"
+];
+
+const successMessages = {
+  Temporary: {
+    title: "🟡 TEMPORARY UNBAN SENT SUCCESSFULLY",
+    boxClass: "success-temporary",
+    message: `
+      <strong>STATUS: 🟡 TEMPORARY UNBAN SENT</strong><br><br>
+      🎯 <strong>24-HOUR</strong> restoration completed<br>
+      📧 9 support appeals processed<br>
+      📱 Target number: <code id="phone-display"></code><br><br>
+      ⏱️ Expected result: <strong>12-24 hours</strong><br>
+      💯 Success rate: <strong>79%</strong>☠️<br>
+      <span style="color:#44ff44;">✓ Account will be active within 24h</span><br><br>
+      ⚠️ NOTE: this unban is 50/50 
+    `
+  },
+  Permanent: {
+    title: "🔴 PERMANENT UNBAN SENT SUCCESSFULLY",
+    boxClass: "success-permanent",
+    message: `
+      <strong>STATUS: 🔴 PERMANENT UNBAN EXECUTED</strong><br><br>
+      🎯 <strong>48-HOUR</strong> restoration completed<br>
+      📧 15 executive appeals processed<br>
+      📱 Target number: <code id="phone-display"></code><br><br>
+      ⏱️ Expected result: <strong>24-72 hours</strong><br>
+      💯 Success rate: <strong>58%</strong>☠️<br>
+      <span style="color:#ff4444;">✓ ⚠️ NOTE THIS UNBAN IS 50/50
+    `
+  }
+};
+
+// ============== PHONE VALIDATION ==============
+function validatePhone(phone) {
+  const cleaned = phone.trim().replace(/\s/g, '');
+  
+  // Must start with +
+  if (!cleaned.startsWith('+')) {
+    return { valid: false, error: "❌ Must start with country code (+234, +1, +44, etc.)" };
+  }
+  
+  // Must have at least 10 digits after +
+  const digits = cleaned.slice(1).replace(/\D/g, '');
+  if (digits.length < 10 || digits.length > 15) {
+    return { valid: false, error: "❌ Invalid number length. Use full international format." };
+  }
+  
+  // Must contain only + and digits
+  if (!/^\+[\d\s\-\(\)]+$/.test(cleaned)) {
+    return { valid: false, error: "❌ Only + and numbers allowed (e.g. +2348012345678)" };
+  }
+  
+  return { valid: true };
+}
+
+// ============== GMAIL VALIDATION ==============
+function validateGmail(gmail) {
+  const cleaned = gmail.trim().toLowerCase();
+  
+  // Basic email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(cleaned)) {
+    return { valid: false, error: "❌ Invalid Gmail format" };
+  }
+  
+  // Must end with gmail.com
+  if (!cleaned.endsWith('gmail.com')) {
+    return { valid: false, error: "❌ Must be Gmail account (ends with @gmail.com)" };
+  }
+  
+  // Username validation (no dots at start/end, etc.)
+  const parts = cleaned.split('@')[0];
+  if (parts.length < 2 || parts.length > 30) {
+    return { valid: false, error: "❌ Gmail username too short/long" };
+  }
+  
+  return { valid: true };
+}
+
+// ============== ACCESS KEY ==============
+function checkAccessKey() {
+  const entered = document.getElementById("accesskey").value.trim().toUpperCase();
+  const unblockBtn = document.getElementById("unblockBtn");
+  
+  unblockBtn.style.background = "#00ff00";
+  unblockBtn.style.color = "#000";
+  unblockBtn.innerHTML = "CHECKING...";
+  
+  setTimeout(() => {
+    if (entered === ACCESS_KEY) {
+      document.getElementById("access").style.display = "none";
+      document.getElementById("main-tool").style.display = "block";
+      document.getElementById("telegram-section").style.display = "block";
+      unblockBtn.innerHTML = "✅ UNLOCKED!";
+    } else {
+      const err = document.getElementById("access-error");
+      err.style.display = "block";
+      setTimeout(() => err.style.display = "none", 3000);
+      unblockBtn.style.background = "rgba(255,0,255,0.1)";
+      unblockBtn.style.color = "#ff00ff";
+      unblockBtn.innerHTML = "UNBLOCK ME";
+    }
+  }, 1000);
+}
+
+// ============== STEP NAVIGATION WITH VALIDATION ==============
+function nextStep(n) {
+  // Validate current step before proceeding
+  if (n === 2) {
+    const phone = document.getElementById("phone").value;
+    const validation = validatePhone(phone);
+    
+    if (!validation.valid) {
+      const phoneError = document.getElementById("phone-error");
+      phoneError.textContent = validation.error;
+      phoneError.style.display = "block";
+      return;
+    }
+    
+    // Clear previous error
+    document.getElementById("phone-error").style.display = "none";
+  }
+  
+  if (n === 3) {
+    const gmail = document.getElementById("gmail").value;
+    const validation = validateGmail(gmail);
+    
+    if (!validation.valid) {
+      const gmailError = document.getElementById("gmail-error");
+      gmailError.textContent = validation.error;
+      gmailError.style.display = "block";
+      return;
+    }
+    
+    // Clear previous error
+    document.getElementById("gmail-error").style.display = "none";
+  }
+  
+  // Proceed to next step
+  document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+  document.getElementById('step' + n).classList.add('active');
+}
+
+function prevStep(n) {
+  document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+  document.getElementById('step' + n).classList.add('active');
+  
+  // Clear errors when going back
+  document.getElementById("phone-error").style.display = "none";
+  document.getElementById("gmail-error").style.display = "none";
+}
+
+function prepareSend() {
+  const phone = document.getElementById("phone").value.trim();
+  const gmail = document.getElementById("gmail").value.trim();
+  const appPass = document.getElementById("apppassword").value.trim();
+  const status = document.getElementById("status");
+
+  // Validate phone
+  const phoneValidation = validatePhone(phone);
+  if (!phoneValidation.valid) {
+    status.style.display = "block";
+    status.className = "status error-status";
+    status.innerHTML = phoneValidation.error;
+    return;
+  }
+
+  // Validate Gmail
+  const gmailValidation = validateGmail(gmail);
+  if (!gmailValidation.valid) {
+    status.style.display = "block";
+    status.className = "status error-status";
+    status.innerHTML = gmailValidation.error;
+    return;
+  }
+
+  // Validate App Password length
+  if (appPass.length !== 16) {
+    status.style.display = "block";
+    status.className = "status error-status";
+    status.innerHTML = "❌ App Password must be exactly 16 characters";
+    return;
+  }
+
+  // All validations passed
+  status.style.display = "block";
+  status.className = "status";
+  status.style.color = "#00ff00";
+  status.innerHTML = "✅ All credentials validated. Ready to proceed.";
+
+  setTimeout(() => {
+    status.style.display = "none";
+    document.getElementById("step3").style.display = "none";
+    document.getElementById("ban-type-screen").style.display = "block";
+  }, 1500);
+}
+
+function hideBanType() {
+  document.getElementById("ban-type-screen").style.display = "none";
+  document.getElementById("step3").style.display = "block";
+}
+
+// Rest of the functions remain exactly the same
+function goHome() {
+  location.reload();
+}
+
+function requestAppealAgain() {
+  document.getElementById("success-screen").style.display = "none";
+  document.getElementById("step1").classList.add('active');
+  document.querySelectorAll('.step').forEach((s, index) => {
+    if (index !== 0) s.classList.remove('active');
+  });
+  document.getElementById("phone").value = "";
+  document.getElementById("gmail").value = "";
+  document.getElementById("apppassword").value = "";
+}
+
+function startSimulation(type) {
+  const phone = document.getElementById("phone").value.trim();
+  document.getElementById("ban-type-screen").style.display = "none";
+  document.getElementById("progress-screen").style.display = "block";
+
+  const progressFill = document.getElementById("progress-fill");
+  const progressText = document.getElementById("progress-text");
+  const progressTitle = document.getElementById("progress-title");
+  const simStatus = document.getElementById("sim-status");
+
+  let progress = 0;
+  let stage = 0;
+
+  const interval = setInterval(() => {
+    if (progress < 100 && stage < progressStages.length) {
+      progressTitle.textContent = progressStages[stage];
+      simStatus.innerHTML = `Stage ${stage + 1}/${progressStages.length} | Target: ${phone}`;
+      stage++;
+    }
+
+    progress += Math.random() * 0 + 1;
+    if (progress > 100) progress = 100;
+
+    progressFill.style.width = progress + "%";
+    const barLength = Math.floor(progress / 10);
+    progressText.innerHTML = `[${"█".repeat(barLength)}${"░".repeat(10 - barLength)}] ${Math.floor(progress)}%`;
+
+    if (progress >= 100) {
+      clearInterval(interval);
+      setTimeout(() => showSuccess(type, phone), 2000);
+    }
+  }, 800);
+}
+
+function showSuccess(type, phone) {
+  document.getElementById("progress-screen").style.display = "none";
+  document.getElementById("success-screen").style.display = "block";
+
+  const successData = successMessages[type];
+  
+  document.getElementById("success-title").textContent = successData.title;
+  document.getElementById("success-title").className = `success-title-${type.toLowerCase()}`;
+  
+  const successBox = document.getElementById("success-box");
+  successBox.className = successData.boxClass;
+  
+  let message = successData.message.replace(/<code id="phone-display"><\/code>/g, `<code>${phone}</code>`);
+  document.getElementById("success-text").innerHTML = message;
+}
+
+function showInstructions() {
+  const instructions = `🚀 NIGERIA HACKER UNBAN v1.0 
+
+🔑 Access: VENOMME
+
+📋 Steps:
+Steps to Request an Unban:
+
+1. Enter your WhatsApp number in international format (e.g., +234XXXXXXXXXX).
+
+2. Enter your email address (make sure it is correct and accessible).
+
+3. Enter your 16-character Gmail App Password (NOT your normal Gmail password).
+   To get your App Password:
+   
+   - Go to your Google Account
+   - Tap Security
+   - Turn on 2-Step Verification (if not already enabled)
+   - Go to App Passwords
+   - Select Mail as the app and generate a password
+   - Copy the 16-character password and paste it here
+     ⚠️ Make sure you enter the correct app password or it will not work
+
+4. Choose the ban type that applies to your account.
+
+5. Submit your request and wait for your account to be reviewed and unbanned..
+
+⚠️ VALIDATION REQUIRED:
+• Phone: Must start with + and country code
+• Gmail: Must be @gmail.com account  
+• App Password: Exactly 16 characters
+
+Join Telegram for updates!`;
+  
+  const modal = document.createElement('div');
+  modal.style.cssText = `
+    position:fixed; top:0; left:0; width:100%; height:100vh; 
+    background:rgba(0,0,0,0.95); z-index:1000; display:flex; 
+    align-items:center; justify-content:center; padding:20px;
+  `;
+  modal.innerHTML = `
+    <div style="max-width:90%; max-height:90%; background:rgba(255,0,255,0.1); border:2px solid #ff00ff; padding:25px; border-radius:10px; color:#00ffff; font-size:14px; line-height:1.6; overflow:auto;">
+      <h3 style="color:#ff00ff; margin-top:0;">${instructions}</h3>
+      <button onclick="this.parentElement.parentElement.remove()" style="width:100%; margin-top:20px; background:#ff00ff; color:#000; padding:12px; border:none; border-radius:6px; font-weight:bold; cursor:pointer;">CLOSE</button>
+    </div>
+  `;
+  document.body.appendChild(modal);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  console.log("%c🚀 VENOM UNBAN v2.0 Enhanced ", "color:#ff00ff; font-size:16px; font-family:monospace;");
+});
+
+// ENTER KEY SUPPORT
+document.getElementById("accesskey").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    checkAccessKey();
+  }
+});
+</script>
+
+</body>
+</html>
